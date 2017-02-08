@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,700,800')
+
+$font-stack: 'Open Sans', sans-serif
+$primary-color: #303952
+$secondary-color: #fc85ae
+$purple-color: #564a91
+$light-grey-color: #a1a1a1
+$white: #fff
+
+
+body
+  font: 100% $font-stack
+
+a
+  text-decoration: none
+
+h6
+  font-size: 1em
+  margin: 0.5em 0
+
+h3
+  font-size: 1.7em
+  margin: 0.4em 0 0.8em
+
+h5
+  font-size: 1.1em  
+  margin: 0.4em 0 0.8em
+  letter-spacing: 0.3px  
+
+p
+  font-size: 0.9em  
+  line-height: 1.7
+
+.text-center
+  text-align: center
+
+.text-uppercase
+  text-transform: uppercase
+
+.bold
+  font-weight: 800
+
+.regular
+  font-weight: 400
+
+.semi-bold
+  font-weight: 600  
+
+.light
+  font-weight: 300
+
+.list-style-none
+  list-style: none
+
+.list-inline > li
+  display: inline-block
+  
+.btn
+  @extend .text-center
+  @extend .relative
+  padding: 0.75em 2em
+  border-radius: 1.5em
+  color: $white
+  display: block
+  max-width: 250px
+  margin: 2em auto
+
+.white
+  color: $white
+
+.btn-pink
+  background: $secondary-color
+
+.hero-button
+  background: $secondary-color
+
+.flex-row
+  display: flex
+  flex-direction: row
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute  
+
+.primary
+  color: $primary-color
+
+.secondary
+  color: $secondary-color
+
+.purple
+  color: $purple-color
+
+.light-grey
+  color: $light-grey-color
+
+.img-responsive
+  max-width: 100%
+
+.container
+  width: 100%
+  margin: 0 auto
+
+.content-before
+  @extend .absolute
+  content: ''  
+
+header
+  background: $primary-color url('../images/head-bg.png') center no-repeat
+  background-size: contain
+  height: 100vh
+  
+  .head-top
+    @extend .flex-row
+    justify-content: space-between 
+    padding: 1.5em 7em
+    
+    .logo > a >img
+      max-width: 100px
+    
+    .nav-icon
+      width: 30px
+      cursor: pointer
+      margin: 2em
+      
+      div
+        background: $secondary-color
+        width: 30px
+        height: 2px
+        margin-bottom: 5px
+
+.intro
+  justify-content: center
+  align-items: center
+ 
+  h1
+    font-size: 5em
+    margin: 0.1em 0
+  
+  .date
+    margin: 0.5em 0
+    font-size: 1em   
+
+.conference
+  background: $white
+
+  .conference-wrap
+    @extend .flex-row
+    @extend .relative
+    padding-right: 2em
+  
+  .conference-desc
+    @extend .relative
+    flex: 1 0 45%
+    padding: 1em 9em
+    background: $white
+    top: -70px
+    margin-right: 4em
+    
+    .rotate-title
+      @extend .absolute
+      transform: rotate(90deg)
+      left: -15px
+      top: 50%
+    
+    .rotate-title:before
+      @extend .content-before
+      width: 30px
+      height: 2px  
+      background: $primary-color
+      top: -4px
+      left: -13px
+    
+    .top-brdr-title
+      @extend .relative  
+      margin: 1em 0 4em
+      letter-spacing: 0.5px
+    
+    .top-brdr-title:before
+      @extend .content-before
+      width: 65px
+      height: 2px
+      background: $secondary-color
+      top: -8px
+ 
+  .conference-desc p.desc
+    font-size: 1em
+    line-height: 1.5 
+  
+  .conference-keys
+    @extend .relative
+    background: $purple-color  
+    padding: 4em 5em
+    top: -33px
+    
+    .count
+      font-size: 1.5em
+    
+    .key-list
+      @extend .list-style-none
+      
+      li
+        @extend .flex-row
+        
+        .key-content
+          margin-left: 2em
+
+.journey
+  @extend .relative
+  padding: 0 1.5em 1.5em
+
+  .play-btn
+    @extend .flex-row
+    width: 300px
+    margin: 4em auto 6em
+    justify-content: center
+    align-items: center
+  
+  .play-btn i
+    font-size: 9em
+    margin: 0 0.1em
+
+  .play-btn:before  
+    @extend .content-before
+    width: 2px
+    height: 100px
+    background: $secondary-color
+    top: -12.3em
+
+  .play-btn:after
+    @extend .content-before
+    width: 2px
+    height: 100px
+    background: $secondary-color
+    top: 15em
+    z-index: 9
+  
+  .journey-bg-pattern
+    @extend .absolute
+    left: 0
+    top: -6em
+    width: 250px
+    
+  .journey-wrap
+    @extend .flex-row
+    @extend .relative
+    background: #fafafa
+    padding: 7em 0
+  
+    .journey-date
+      @extend .absolute
+      top: 0
+      right: 0
+      transform: rotate(90deg)
+      font-size: 0.8em
+      letter-spacing: 1.2px
+    
+    .journey-date:before
+      @extend .content-before
+      width: 40px
+      height: 2px
+      background: $primary-color
+      left: -15px
+      top: -3px
+    
+    .why-journey .why-journey-content
+      max-width: 415px
+      margin: 0 auto
+    
+    .journey-center-img
+      @extend .absolute
+      width: 300px
+      bottom: 12em
+      left: 40%
+
+  .when-journey-block1
+    max-width: 335px
+    margin: 0 auto
+    position: relative
+    top: 5em
+  
+  .when-journey-block
+    max-width: 335px
+    margin: 1em auto 4em
+
+.featuring
+  @extend .relative
+  background: $primary-color
+  background-size: contain
+  padding-bottom: 2em
+  
+  .feature-before, .feature-after, .feature-bottom-img, .feature-bottom-smoke
+    @extend .absolute
+  
+  .feature-before
+    left: 0
+    top: 15%
+    height: 320px
+
+  .feature-after
+    right: 0
+    height: 250px
+    top: -4em
+
+  .feature-bottom-img
+    width: 60%
+    bottom: 0
+    left: 0  
+
+  .feature-bottom-smoke
+    width: 250px
+    bottom: 0
+    right: 0  
+
+  .featuring-wrap
+    @extend .flex-row
+    @extend .relative
+    justify-content: space-between
+    padding: 3em 3em 1em
+    
+    .featuring-col:first-child
+      @extend .relative
+      top: -10em
+    
+    .feature-center
+      @extend .relative
+      width: 220px
+      text-align: center
+      padding: 1em!important
+    
+    .feature-center:before
+      @extend .absolute
+      content: ''
+      top: -9em
+      left: 50%
+      width: 2px
+      height: 150px
+      background: $secondary-color
+
+    .featuring-col
+      padding: 2em
+
+      .feature-block
+        width: 415px
+        height: 415px
+        margin: 0 auto
+        padding: 9em 2.5em 5em
+
+        .feture-social-links
+          margin-top: 7em
+          padding-left: 0
+
+        .feture-social-links > li
+          margin: 0 0.5em
+      
+      .mercer, .dustin
+        background: url('../images/mercer.png') no-repeat
+        background-size: contain
+      
+      .tobey
+        background: url('../images/eliza.png') no-repeat
+        background-size: contain
+        margin-top: 4em
+      
+      .jeremy
+        background: url('../images/jeremy.png') no-repeat
+        background-size: contain
+        margin-bottom: 4em  
+
+  .full-crew-btn    
+    margin: 6em auto
+
+.scheduling
+  padding: 2em
+
+  .schedule-wrap
+    @extend .flex-row
+    @extend .relative
+    justify-content: space-around
+    background: #fafafa
+    padding-left: 5em
+    
+    .schedule-col
+      padding: 5em 3em
+
+      .schedule-days > li
+        margin: 1em 0  
+        @extend .relative
+      
+      .schedule-days > li > a
+        @extend .bold
+        font-size: 0.9em
+        color: #333
+
+      .schedule-days > li.active:before        
+        @extend .content-before
+        width: 70px
+        height: 2px
+        background: $secondary-color
+        top: -7px
+    
+    .schedule-time-slot
+      margin-top: 3.5em
+
+    .schedule-time-slot ul li
+      display: inline-block
+      width: 49%
+      padding: 1em
+
+  .schedule-wrap ul
+    padding-left: 0 
+    margin-top: 2.5em
+
+  .schedule-wrap:before
+    @extend .content-before
+    width: 2px
+    height: 140px
+    background: $secondary-color
+    top: -4em 
+    left: 50%
+
+.faq
+  @extend .relative
+  
+  .faq-pattern
+    @extend .absolute
+    top: -12em
+    left: 0
+    width: 250px
+
+  .faq-wrap
+    @extend .flex-row
+
+    .faq-col .faq-img
+      position: relative
+      left: 4em
+      top: 4em
+
+    .faqs
+      background: $purple-color
+      min-width: 750px
+      padding: 5em 9em
+
+    .faqs ul
+      padding-left: 0
+
+.sponsors
+  padding: 2em
+
+  .sponsor-wrap
+    @extend .relative
+    background: #fafafa
+    padding: 5em 1em
+    z-index: 1
+  
+  .sponsor-wrap h3
+    padding-left: 3em
+
+  .sponsor-wrap ul
+    padding-left: 0
+  
+  .sponsor-wrap ul > li 
+    width: 33%
+    padding: 3em 6em
+    a
+      display: block
+  
+  .become-sponsor    
+    width: 360px
+    margin: 0 auto
+    text-align: center
+    padding: 1em
+  
+  .event-by
+    @extend .content-before
+    bottom: 8em
+    right: -4em
+    transform: rotate(90deg)
+    font-size: 0.8em
+    letter-spacing: 1.2px
+
+  .event-by:before
+    @extend .content-before
+    width: 40px
+    height: 2px
+    background: #303952
+    left: -15px
+    top: -3px  
+
+footer
+  @extend .relative   
+  background: $primary-color 
+
+  .footer-wrap
+    @extend .relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 2em 2em 1em 
+
+    .footer-logo  
+      @extend .relative
+      max-width: 200px
+      margin: 3em 0
+    
+    .footer-logo:before
+      @extend .content-before
+      width: 2px
+      height: 140px
+      background: $secondary-color
+      top: -8.5em
+      left: 50%
+
+    .newsletter  
+      margin: 2em 0 8em
+      
+      .input-group
+        border: 2px solid #f2f2f2
+        border-radius: 21px
+        overflow: hidden
+        width: 435px
+
+        input
+          display: inline-block
+          float: left
+          background: transparent
+          border: 0
+          padding: 1.5em
+          font-weight: bold
+          font-size: 0.7em
+          color: $light-grey-color
+          outline: none
+
+        input.input-email  
+          width: calc(100% - 52px)
+
+    .copyright p 
+      font-size: 0.7em
+      color: #a1a1a1     
+
+  .footer-before, .footer-after
+    @extend .absolute    
+    width: 200px
+
+  .footer-before
+    top: -5em
+    left: 0
+  
+  .footer-after
+    right: 0
+    bottom: 0
+
